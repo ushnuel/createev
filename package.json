@@ -6,7 +6,7 @@
   "scripts": {
     "start": "set NODE_ENV=prod&&node ./build",
     "build": "babel ./src --out-dir ./build",
-    "start-dev": "set NODE_ENV=dev&&babel-watch index.js",
+    "start-dev": "set NODE_ENV=dev&&babel-watch ./src",
     "test": "mocha --timeout 10000ms --require @babel/register --require @babel/polyfill --exit ./tests/*.test.js"
   },
   "keywords": [],

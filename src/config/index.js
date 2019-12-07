@@ -1,7 +1,6 @@
 import 'dotenv/config';
 
 const config = {};
-
 switch (process.env.NODE_ENV) {
   case 'dev':
     config.PORT = process.env.DEV_PORT;
@@ -21,7 +20,6 @@ const auth = {
   user: 'ezeemmanuel2010@gmail.com',
   pass: process.env.password,
 };
-
 config.auth = auth;
 
 export default config;
