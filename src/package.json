@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=prod&&node ./dist",
+    "build": "babel index.js --out-dir ./dist",
+    "start-dev": "set NODE_ENV=dev&&babel-watch index.js",
+    "test": "mocha --timeout 10000ms --require @babel/register --require @babel/polyfill --exit ./tests/register.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1",
+    "mocha": "^6.2.1",
+    "nodemailer": "^6.3.0",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.2",
+    "babel-watch": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0"
+  }
+}
