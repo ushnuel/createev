@@ -2,6 +2,7 @@ import CourseModel from '../models/courseModel';
 
 export default class CourseControl {
   static async create(req, res, next) {
+    console.log('REQ', req.body);
     try {
       const data = await CourseModel.create(req.body);
       res.status(201).json({ data, status: 201 });

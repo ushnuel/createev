@@ -7,7 +7,6 @@ export default class Course {
       capacity: 50,
       days: 50,
       level: 'Intermediate',
-      description: 'Become a full stack developer',
     };
   }
 }

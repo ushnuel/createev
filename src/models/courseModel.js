@@ -2,20 +2,20 @@ import DB from '../DB';
 import { ErrorHandler } from '../helpers';
 
 export default class Course {
-  static async create({ price, title, days, capacity, level, description }) {
+  static async create({ price, title, days, capacity, level, weeks }) {
     const query = `INSERT INTO courses (
       title, 
       price,
       days,
       capacity,
       level,
-      description
+      weeks
     )
     VALUES($1,$2,$3,$4,$5,$6)
     RETURNING *
     `;
 
-    const params = [title, price, days, capacity, level, description];
+    const params = [title, price, days, capacity, level, weeks];
     const course = await DB.query(query, params).catch((error) => {
       throw new ErrorHandler(error.message, 400);
     });
